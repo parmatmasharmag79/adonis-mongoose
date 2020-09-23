@@ -5,7 +5,7 @@ const AdonisMongoose = require('mongoose')
 
 class MongooseProvider extends ServiceProvider {
 
-  * register () {
+  register () {
     this.app.singleton('Adonis/Addons/AdonisMongoose', function (app) {
         const Config = app.use('Adonis/Src/Config')
         const mongoHost = Config.get('mongo.host', '127.0.0.1')
